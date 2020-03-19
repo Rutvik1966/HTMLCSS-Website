@@ -1,0 +1,212 @@
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E69A8DFF;
+
+    overflow-x: hidden;
+    padding-top: 125px;
+  }
+  
+  .sidebar a {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #5F4B8BFF;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #00539CFF;
+  }
+  
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+  .navp{
+    font-size: 15px;
+    color: #818181;
+    padding: 10px 8px 10px 16px;
+    padding-top: 250px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  /*head*/
+  header {
+    position: relative;
+    margin-top: -5vw;
+    margin-right: -.6vw;
+    height: 300px;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
+    /* change the calc height to a percentage height to get alternate responsive behavior*/
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 100px 0;
+    font: 44px "Arial";
+    color: white;
+    text-align: center;
+  }
+  p{
+   
+    font: 14px "Arial";
+    color: black;
+    padding-top: 15px;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    justify-content: center;
+
+  }
+
+.lista{
+    justify-content: center;
+}
+.lista ol{
+    list-style: none;
+    counter-reset: my-counter;
+    margin: 0rem;
+    padding:  0rem 0rem 0rem 1.5rem;
+}
+.lista li{
+    counter-increment: my-counter;
+    border-left: solid 2px #cdcdcd;
+  /*  border-bottom: solid 2px #cdcdcd; */
+    padding-top: 2rem;
+    padding-left: 8rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "icon:text";
+    align-items: start;
+}
+.lista li:before {
+    content: counter(my-counter);
+    font-weight: bold;
+    background-color: #cdcdcd;
+    border: 3px solid #f5f6f1;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 0.8rem 1.4rem;
+    color: #fff;
+    margin-left: -2.0rem;
+    margin-right: auto;
+    grid-area: icon;
+}
+.card{
+    grid-area: text;
+    margin-left: 4rem;
+    border-radius: 0px;
+    box-shadow: 0 0 5px 1px #ddd;
+    margin-top: 0.5rem;
+}
+.card-html .card-header:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #e65127;
+    border-width: 10px;
+    top: 10px;
+}
+.card-css .card-header:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #379ad6;
+    border-width: 10px;
+    top: 10px;
+}
+.card-js .card-header:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #f2bf26;
+    border-width: 10px;
+    top: 10px;
+}
+.card-php .card-header:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #8b92bd;
+    border-width: 10px;
+    top: 10px;
+}
+.card-bootstrap .card-header:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #7952b3;
+    border-width: 10px;
+    top: 10px;
+}
+.card .card-header{
+    background-color: #8abe3e;
+    color: #fff;
+    font-size: 22px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.btn-success{
+    background-color: #8abe3e;
+    color: #fff;
+    border-color: #8abe3e;
+    border-radius: 0px;
+}
+.card-css .card-header, .card-css .btn-success{
+    background-color: #379ad6;
+    border-color: #379ad6;
+}
+.card-html .card-header, .card-html .btn-success{
+    background-color: #e65127;
+    border-color: #e65127;
+}
+.card-js .card-header, .card-js .btn-success{
+    background-color: #f2bf26;
+    border-color: #f2bf26;
+}
+.card-bootstrap .card-header, .card-bootstrap .btn-success{
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+.card-php .card-header, .card-php .btn-success{
+    background-color: #8b92bd;
+    border-color: #8b92bd;
+}
+
+  
